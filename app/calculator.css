@@ -1,0 +1,339 @@
+/* OTS Incentive Calculator Custom Styles */
+
+/* Main Container */
+.calculator-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f1f5f9 0%, #e0f2fe 50%, #e2e8f0 100%);
+  padding: 2rem 1rem;
+}
+
+.calculator-wrapper {
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.calculator-card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+}
+
+/* Header Section */
+.calculator-header {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.calculator-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.calculator-subtitle {
+  color: #bfdbfe;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* Form Section */
+.calculator-form {
+  padding: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 0.5rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  color: #1e293b;
+  background-color: white;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+}
+
+.form-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.form-input::placeholder {
+  color: #94a3b8;
+}
+
+.form-helper {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin-top: 0.25rem;
+}
+
+/* Button */
+.calculate-button {
+  width: 100%;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: white;
+  font-weight: 600;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.4);
+}
+
+.calculate-button:hover:not(:disabled) {
+  background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px 0 rgba(37, 99, 235, 0.5);
+}
+
+.calculate-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Error Message */
+.error-message {
+  margin: 0 2rem 1.5rem 2rem;
+  padding: 1rem;
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.error-icon {
+  color: #ef4444;
+  font-size: 1.125rem;
+  flex-shrink: 0;
+}
+
+.error-text {
+  color: #991b1b;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Success Message */
+.success-message {
+  margin: 0 2rem 1.5rem 2rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+  border: 1px solid #bbf7d0;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.success-icon {
+  color: #22c55e;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.success-content {
+  flex: 1;
+}
+
+.success-title {
+  color: #166534;
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin: 0 0 0.75rem 0;
+}
+
+.success-incentive {
+  color: #15803d;
+  font-weight: 500;
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+.incentive-value {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #166534;
+}
+
+/* Calculation Breakdown */
+.calculation-breakdown {
+  background: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  border: 1px solid #d1fae5;
+}
+
+.breakdown-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  color: #374151;
+  font-size: 0.875rem;
+}
+
+.breakdown-row span:first-child {
+  font-weight: 500;
+}
+
+.breakdown-row span:last-child {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.breakdown-divider {
+  height: 1px;
+  background-color: #d1fae5;
+  margin: 0.5rem 0;
+}
+
+.total-row {
+  background-color: #f3f4f6;
+  margin: 0 -1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.25rem;
+  font-weight: 600;
+}
+
+.total-row span {
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.incentive-row {
+  background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+  margin: 0 -1rem;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.incentive-row span {
+  color: #166534;
+  font-weight: 700;
+}
+
+.incentive-row span:last-child {
+  font-size: 1.125rem;
+}
+
+/* Info Section */
+.info-section {
+  margin: 0 2rem 2rem 2rem;
+  padding: 1.5rem;
+  background-color: #f8fafc;
+  border-radius: 0.5rem;
+  border: 1px solid #e2e8f0;
+}
+
+.info-title {
+  color: #1e293b;
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin: 0 0 0.75rem 0;
+}
+
+.info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.info-item {
+  color: #475569;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.info-item:last-child {
+  margin-bottom: 0;
+}
+
+.info-arrow {
+  color: #2563eb;
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .calculator-container {
+    padding: 1rem 0.5rem;
+  }
+  
+  .calculator-header {
+    padding: 1.5rem;
+  }
+  
+  .calculator-title {
+    font-size: 1.5rem;
+  }
+  
+  .calculator-subtitle {
+    font-size: 1rem;
+  }
+  
+  .calculator-form {
+    padding: 1.5rem;
+  }
+  
+  .info-section {
+    margin: 0 1.5rem 1.5rem 1.5rem;
+  }
+  
+  .error-message,
+  .success-message {
+    margin: 0 1.5rem 1.5rem 1.5rem;
+  }
+}
+
+/* Animation for messages */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.error-message,
+.success-message {
+  animation: fadeInUp 0.3s ease-out;
+}
+
+/* Enhanced focus states for accessibility */
+.form-input:focus,
+.calculate-button:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
